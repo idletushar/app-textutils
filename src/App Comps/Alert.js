@@ -8,11 +8,13 @@ export default function Alert(props) {
   }
 
   return (
-    // this syntax will make jsx to javascripts call
-    props.alert && <div>
+    <div style={{height: '50px'}}>
+    {/* // this syntax will make jsx to javascripts call */}
+    {props.alert && <div>
         <div class={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
         <strong> {capitalize(props.alert.type)} </strong> {props.alert.msg}
         </div>
+    </div>}
     </div>
   )
 }

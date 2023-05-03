@@ -22,13 +22,13 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor = '#042743' ;
       showAlert('Dark Mode has been enabled', 'success');
-      document.title = ' TextUtils - Dark Mode'
+      // document.title = ' TextUtils - Dark Mode'
     }
     else{
       setMode('light')
       document.body.style.backgroundColor = 'white' ;
       showAlert('Light Mode has been enabled', 'success');
-      document.title = ' TextUtils'
+      // document.title = ' TextUtils'
     }
   }
   
@@ -57,7 +57,7 @@ function App() {
             <About mode={mode}/>
           </Route>
           <Route exact path="/">
-            <Textform showAlert={showAlert} head="Text to Analyaze" mode={mode}/>
+            <Textform showAlert={showAlert} head="TextUtils - Word Counter, Character Counter, LowerCase to UpperCase" mode={mode}/>
           </Route>
         </Switch>
       </div>
