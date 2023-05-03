@@ -65,7 +65,8 @@ export default function Textform(props) {
             <h2>Your text summary</h2>
             <hr/>
             {/* text.split is an array. used for counting words */}
-            <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} character</p>
+            {/* (/\s+/) this is an regular expression */}
+            <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} character</p>
             <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes read</p>
             <hr />
             <h3>Preview</h3>
